@@ -1,0 +1,14 @@
+.testClass{
+    background-color: var(--color-slate-800) !important;
+    color: white !important;
+    padding: 0px !important;
+
+
+}
+.testClassActive{
+    background-color: var(--color-blue-800) !important;
+    color: white !important;
+    border-radius: 9px !important;
+    padding: 0px !important;
+}
+

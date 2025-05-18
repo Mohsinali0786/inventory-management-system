@@ -57,7 +57,7 @@ export default function SalesOverview() {
         </div>
       </div>
       <div className="col-span-4 p-8">
-        <h2 className="mb-2 text-xl">Inventory Summary</h2>
+        <h2 className="mb-6 text-xl">Inventory Summary</h2>
         <div>
           {inventorySummary.map((items, i) => {
             return (

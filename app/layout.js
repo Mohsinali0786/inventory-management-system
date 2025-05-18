@@ -1,5 +1,12 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
+
+//Used for uplaoding Files
+import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
+import { extractRouterConfig } from "uploadthing/server";
+import { ourFileRouter } from "../app/api/uploadthing/core";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,7 +29,14 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <AppRouterCacheProvider>
+
+        {/* Used for uplaoding Files */}
+          <NextSSRPlugin
+            routerConfig={extractRouterConfig(ourFileRouter)}
+          />
+          {children}
+        </AppRouterCacheProvider>
       </body>
     </html>
   );

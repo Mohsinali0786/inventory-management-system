@@ -1,5 +1,9 @@
 // tailwind.config.js
-module.exports = {
+import { withUt } from "uploadthing/tw";
+
+export default withUt({
+  // Your existing Tailwind config
+  // content: ["./src/**/*.{js,ts,tsx,mdx}"],
   theme: {
     // ...
   },
@@ -7,4 +11,6 @@ module.exports = {
     require('@tailwindcss/forms'),
     // ...
   ],
-}
+  content: ["./src/**/*.{ts,tsx,mdx}"],
+});
+

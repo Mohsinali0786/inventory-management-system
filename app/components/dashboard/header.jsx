@@ -47,7 +47,7 @@ export default function Header() {
               <ChevronDown className="w-3 h-3" />
             </button>
             <button>
-                <Image width={96} height={96} className="rounded-full w-9 h-9 border border-salte-800" alt="user image" src=""/>
+                <Image width={96} height={96} className="rounded-full w-9 h-9 border border-salte-800" alt="user image" src="/"/>
             </button>
             <button className="flex items-center">
               <LayoutGrid className="w-6 h-6 text-slate-900" />
